@@ -98,8 +98,8 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-# Add Ruby gem's bin dir to path
-export PATH=$PATH:/var/lib/gems/1.8/bin
+# Load RVM correctly
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
 # Enable vi mode
 set -o vi

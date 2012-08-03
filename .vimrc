@@ -25,6 +25,6 @@ set expandtab
 " vim-pathogen
 call pathogen#infect()
 
-" Open NERDTree automatically
+" Open NERDTree automatically, close vim if only NERDTree is open
 autocmd vimenter * if !argc() | NERDTree | endif
-
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif

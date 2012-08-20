@@ -16,11 +16,22 @@ set ic
 " Turn on line numbering
 set nu
 
+" Use mouse selections
+set mouse=a
+
+" Code folding
+" toggle on with za, fold all with zm, open all zr
+" close with zc, open with zo
+set foldmethod=indent
+set foldnestmax=1
+set nofoldenable
+set foldlevel=1
+
 " 2 space tabs
-set softtabstop=2
-set shiftwidth=2
-set tabstop=2
-set expandtab
+"set softtabstop=2
+"set shiftwidth=2
+"set tabstop=2
+"set expandtab
 
 " vim-pathogen
 call pathogen#infect()

@@ -27,6 +27,13 @@ set foldnestmax=1
 set nofoldenable
 set foldlevel=1
 
+" Some reasonable colors
+set background=light
+hi clear
+if exists("syntax_on")
+    syntax reset
+endif
+
 " 2 space tabs
 "set softtabstop=2
 "set shiftwidth=2

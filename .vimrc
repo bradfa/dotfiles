@@ -19,6 +19,9 @@ set nu
 " Use mouse selections
 set mouse=a
 
+" Decent font
+set gfn=Liberation\ Mono\ 10
+
 " Code folding
 " toggle on with za, fold all with zm, open all zr
 " close with zc, open with zo

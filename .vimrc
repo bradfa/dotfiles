@@ -19,8 +19,10 @@ set nu
 " Use mouse selections
 set mouse=a
 
-" Decent font
-set gfn=Liberation\ Mono\ 10
+" Decent GUI font
+if has('gui_running')
+  set guifont=Liberation\ Mono\ 10
+endif
 
 " Code folding
 " toggle on with za, fold all with zm, open all zr

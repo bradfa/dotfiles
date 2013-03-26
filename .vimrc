@@ -48,6 +48,12 @@ endif
 "set tabstop=2
 "set expandtab
 
+" tabs are 4 columns
+"set softtabstop=4
+"set shiftwidth=4
+"set tabstop=4
+"set noexpandtab
+
 " vim-pathogen
 call pathogen#infect()
 

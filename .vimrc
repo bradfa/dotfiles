@@ -3,8 +3,8 @@
 " Turn on syntax highlighting
 syntax on
 
-" Highlight 80th column
-set colorcolumn=80
+" Highlight 81st column, don't code here or beyond
+set colorcolumn=81
 
 " Turn on auto indenting dependent on file type
 filetype indent on

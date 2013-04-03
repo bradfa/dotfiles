@@ -42,6 +42,9 @@ if exists("syntax_on")
     syntax reset
 endif
 
+" Exec pwd .vimrc if present
+set exrc
+
 " 2 space tabs
 "set softtabstop=2
 "set shiftwidth=2

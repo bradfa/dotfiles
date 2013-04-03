@@ -3,6 +3,9 @@
 " Turn on syntax highlighting
 syntax on
 
+" Always wrap at 80 columns
+set tw=80
+
 " Highlight 81st column, don't code here or beyond
 set colorcolumn=81
 

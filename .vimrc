@@ -45,17 +45,29 @@ endif
 " Exec pwd .vimrc if present
 set exrc
 
-" 2 space tabs
-"set softtabstop=2
-"set shiftwidth=2
-"set tabstop=2
-"set expandtab
+" 2 space tabs, Python or CLFS
+function TabCLFS()
+set softtabstop=2
+set shiftwidth=2
+set tabstop=2
+set expandtab
+endfunction
 
-" tabs are 4 columns
-"set softtabstop=4
-"set shiftwidth=4
-"set tabstop=4
-"set noexpandtab
+" tabs are 4 columns, K&R style
+function TabKandR()
+set softtabstop=4
+set shiftwidth=4
+set tabstop=4
+set noexpandtab
+endfunction
+
+" tabs are 8 columns, Linux style
+function TabLinux()
+set softtabstop=8
+set shiftwidth=8
+set tabstop=8
+set noexpandtab
+endfunction
 
 " vim-pathogen
 call pathogen#infect()

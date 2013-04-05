@@ -6,9 +6,6 @@ syntax on
 " Always wrap at 80 columns
 set tw=80
 
-" Highlight 81st column, don't code here or beyond
-set colorcolumn=81
-
 " Turn on auto indenting dependent on file type
 filetype indent on
 set autoindent

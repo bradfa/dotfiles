@@ -24,7 +24,7 @@ set mouse=a
 
 " Decent GUI font
 if has('gui_running')
-  set guifont=Liberation\ Mono\ 10
+  set guifont=Fixed\ 12
 endif
 
 " Code folding
@@ -75,3 +75,7 @@ call pathogen#infect()
 " Open NERDTree automatically, close vim if only NERDTree is open
 autocmd vimenter * if !argc() | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+" Use utf-8
+scriptencoding utf-8
+set encoding=utf-8

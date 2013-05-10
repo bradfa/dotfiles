@@ -12,7 +12,6 @@ HISTCONTROL=$HISTCONTROL${HISTCONTROL+:}ignoredups
 HISTCONTROL=ignoreboth
 
 alias ls='ls --color=auto'
-PS1='[\u@\h \W]\$ '
 
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then

@@ -31,3 +31,6 @@ unset color_prompt force_color_prompt
 
 # Enable vi mode
 set -o vi
+
+# Use git completion
+. ~/.git-completion.bash

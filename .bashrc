@@ -34,3 +34,6 @@ set -o vi
 
 # Use git completion
 . ~/.git-completion.bash
+
+# Enable sudo completion
+complete -cf sudo

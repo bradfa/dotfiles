@@ -1,0 +1,23 @@
+Sync	Pull
+Create	Both
+SyncState *
+
+IMAPAccount fastmail
+	Host mail.messagingengine.com
+	User bradfa@fastmail.fm
+	UseIMAPS yes
+	RequireSSL yes
+	CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+IMAPStore fastmail-remote
+	Account fastmail
+	Path INBOX.
+
+MaildirStore fastmail-local
+	Path ~/.mail/fastmail/
+	Inbox ~/.mail/fastmail/Inbox
+
+Channel fastmail
+	Master :fastmail-remote:
+	Slave :fastmail-local:
+	Pattern *

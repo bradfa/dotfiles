@@ -1,0 +1,9 @@
+[ui]
+username = Andrew Bradford <andrew@bradfordembedded.com>
+verbose = True
+
+[pager]
+pager = LESS='FRX' less
+
+[extensions]
+pager =

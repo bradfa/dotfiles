@@ -20,4 +20,4 @@ MaildirStore fastmail-local
 Channel fastmail
 	Master :fastmail-remote:
 	Slave :fastmail-local:
-	Pattern *
+	Patterns * INBOX

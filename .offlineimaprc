@@ -1,5 +1,6 @@
 [general]
 accounts = fastmail
+fsync = False
 
 [Account fastmail]
 localrepository = fastmaillocal

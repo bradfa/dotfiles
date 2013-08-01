@@ -1,0 +1,14 @@
+set my_name = "Andrew Bradford"
+
+set mbox_type = Maildir
+set folder = "~/.mail/fastmail/"
+set spoolfile = "~/.mail/fastmail/"
+set mask = "!^\\.[^.]"
+set postponed = "+Drafts"
+set header_cache = ~/.cache/mutt
+
+macro index c "<change-folder>?<toggle-mailboxes>" "open a different folder"
+macro pager c "<change-folder>?<toggle-mailboxes>" "open a different folder"
+macro index C "<copy-message>?<toggle-mailboxes>" "copy a message to a mailbox"
+macro index M "<save-message>?<toggle-mailboxes>" "move a message to a mailbox"
+

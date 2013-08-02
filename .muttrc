@@ -31,8 +31,8 @@ bind index,pager <down>   sidebar-next
 bind index,pager <up>     sidebar-prev
 bind index,pager <right>  sidebar-open
 
-# mailboxes `find ~/mail/ -type d -name cur -printf '%h'`
-mailboxes `echo ~/mail/*`
+# Get mailbox names from offlineimap
+source ~/.mutt-mailboxes
 
 set header_cache = ~/.mutt/cache/headers
 set wait_key = no

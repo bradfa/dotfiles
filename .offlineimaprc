@@ -20,10 +20,10 @@ expunge = no
 sslcacertfile = /etc/ssl/certs/ca-certificates.crt
 maxconnections = 3
 
-# [mbnames]
-# enabled = yes
-# filename = ~/.mutt/mailboxes
-# header = "mailboxes"
-# peritem = "+%(accountname)s/%(foldername)s"
-# sep = " "
-# footer = "\n"
+[mbnames]
+enabled = yes
+filename = ~/.mutt-mailboxes
+header = "mailboxes "
+peritem = "+%(foldername)s"
+sep = " "
+footer = "\n"

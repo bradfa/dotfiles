@@ -4,7 +4,7 @@
 syntax on
 
 " Always wrap at 80 columns
-set tw=80
+" set tw=80
 set colorcolumn=81
 
 " Turn on auto indenting dependent on file type
@@ -82,6 +82,7 @@ scriptencoding utf-8
 set encoding=utf-8
 
 if has("autocmd")
-	" For mutt wrap at 72
+	" For mutt and git commits, wrap at 72
 	au FileType mail,tex set textwidth=72
+	au FileType gitcommit set textwidth=72
 endif

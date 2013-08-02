@@ -80,3 +80,8 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 " Use utf-8
 scriptencoding utf-8
 set encoding=utf-8
+
+if has("autocmd")
+	" For mutt wrap at 72
+	au FileType mail,tex set textwidth=72
+endif

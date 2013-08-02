@@ -1,5 +1,7 @@
 set realname = "Andrew Bradford"     # who am i?
 set from = "andrew@bradfordembedded.com"
+set sendmail = "/usr/bin/msmtp -a fastmail"
+unset record
 
 set envelope_from                    # which from?
 set sig_dashes                       # dashes before sig

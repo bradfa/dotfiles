@@ -26,9 +26,6 @@ else
 fi
 unset color_prompt force_color_prompt
 
-# Load RVM correctly
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
-
 # Enable vi mode
 set -o vi
 

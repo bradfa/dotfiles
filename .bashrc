@@ -32,8 +32,4 @@ set -o vi
 # Enable sudo completion
 complete -cf sudo
 
-# Get /sbin and /bin back into the PATH after Arch /usr move, yes this is
-# useless on Arch but it's required when keeping env in chroots
-export PATH=$PATH:/sbin:/bin
-
 export EDITOR=vim

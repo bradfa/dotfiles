@@ -25,7 +25,7 @@ set mouse=a
 
 " Decent GUI font
 if has('gui_running')
-  set guifont=Fixed\ 11
+  set guifont=Liberation\ Mono\ 12
 endif
 
 " Code folding

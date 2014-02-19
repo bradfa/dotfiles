@@ -49,3 +49,6 @@ fi
 complete -cf sudo
 
 export EDITOR=vim
+
+# Set my name for debian packaging, set email in /etc/mail-name
+export DEBFULLNAME="Andrew Bradford"

@@ -1,7 +1,3 @@
-#
-# ~/.bashrc - Updated for Arch Linux
-#
-
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 

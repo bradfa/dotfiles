@@ -23,9 +23,9 @@ set nu
 " Use mouse selections
 set mouse=a
 
-" Decent GUI font
+" Decent font if GUI
 if has('gui_running')
-  set guifont=Liberation\ Mono\ 12
+  set guifont=terminus\ 14
 endif
 
 " Code folding

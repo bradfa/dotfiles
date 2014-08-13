@@ -45,9 +45,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# Enable sudo completion
-complete -cf sudo
-
 export EDITOR=vim
 
 # Set my name for debian packaging, set email in /etc/mail-name

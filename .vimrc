@@ -25,7 +25,7 @@ set mouse=a
 
 " Decent font if GUI
 if has('gui_running')
-  set guifont=terminus\ 14
+  set guifont=terminus\ 12
 endif
 
 " Code folding

@@ -9,6 +9,9 @@ then
 	xrandr --output DP-1 --above DVI-I-1
 fi
 
+# Always set DPI to 72, it's just sane
+xrandr --dpi 72
+
 xscreensaver -no-splash & # start screen saver daemon
 xset r rate 300 40 # keyboard repeat rate, 300 ms delay 40 hz
 exec awesome # wm

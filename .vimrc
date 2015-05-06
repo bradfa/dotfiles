@@ -76,6 +76,8 @@ call pathogen#infect()
 " Open NERDTree automatically, close vim if only NERDTree is open
 autocmd vimenter * if !argc() | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+" Toggle NERDTree on/off with CTRL-N
+map <C-n> :NERDTreeToggle<CR>
 
 " Use utf-8
 scriptencoding utf-8

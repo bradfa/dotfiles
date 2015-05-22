@@ -3,3 +3,10 @@
 	email = andrew.bradford@kodakalaris.com
 [color]
 	ui = 1
+
+[sendemail]
+	smtpencryption = tls
+	from = andrew@bradfordembedded.com
+	smtpserver = mail.messagingengine.com
+	smtpserverport = 587
+	smtpuser = bradfa@fastmail.fm

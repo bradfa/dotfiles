@@ -23,9 +23,10 @@ set nu
 " Use mouse selections
 set mouse=a
 
-" Decent font if GUI
+" Decent font and colors if GUI
 if has('gui_running')
   set guifont=terminus\ 12
+  colorscheme koehler
 endif
 
 " Code folding

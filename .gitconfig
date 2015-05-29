@@ -9,3 +9,6 @@
 	smtpserver = mail.messagingengine.com
 	smtpserverport = 587
 	smtpuser = bradfa@fastmail.fm
+
+[include]
+	path = ~/.gitconfig-emailaddress

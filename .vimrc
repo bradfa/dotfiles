@@ -39,7 +39,6 @@ set foldlevel=1
 
 " Some reasonable colors
 set background=light
-hi clear
 if exists("syntax_on")
     syntax reset
 endif

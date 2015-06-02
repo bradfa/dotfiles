@@ -72,11 +72,13 @@ set sidebar_width   = 32
 # color sidebar_new color221 color233
 set status_chars  = " *%A"
 
-macro index c "<change-folder>?<toggle-mailboxes>" "open a different folder"
-macro pager c "<change-folder>?<toggle-mailboxes>" "open a different folder"
-macro index C "<copy-message>?<toggle-mailboxes>" "copy a message to a mailbox"
+# macro index c "<change-folder>?<toggle-mailboxes>" "open a different folder"
+# macro pager c "<change-folder>?<toggle-mailboxes>" "open a different folder"
+# macro index C "<copy-message>?<toggle-mailboxes>" "copy a message to a mailbox"
 macro index M "<save-message>?<toggle-mailboxes>" "move a message to a mailbox"
 
+bind index C        copy-message
+bind pager C        copy-message
 bind index gg       first-entry
 bind index G        last-entry
 bind index R        group-reply

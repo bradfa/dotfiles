@@ -38,9 +38,8 @@ set nofoldenable
 set foldlevel=1
 
 " Some reasonable colors
-set background=light
 if exists("syntax_on")
-    syntax reset
+  syntax reset
 endif
 
 " Exec pwd .vimrc if present

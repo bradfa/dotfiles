@@ -32,6 +32,8 @@ set ssl_force_tls = yes
 set smtp_url = "smtps://$my_user:$imap_pass@mail.messagingengine.com"
 # Don't wait to enter mailbox manually
 unset imap_passive
+# Keep IMAP connection alive by polling every (seconds)
+set imap_keepalive = 300
 # Poll for new mail automagically every 60 (units?)
 set imap_check_subscribed
 set mail_check = 60

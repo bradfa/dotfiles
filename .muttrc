@@ -131,6 +131,12 @@ mono error bold
 
 # index ----------------------------------------------------------------
 
+# Read messages are green
+# Unread messages not to me are cyan (looks blue to me)
+# Unread messages to me are bright cyan (very eye catching)
+# Messages I've sent are yellow
+# Flagged messages are red
+
 #color index red default "~D(!~p|~p)" # deleted
 #color index black default ~F # flagged
 #color index brightred default ~= # duplicate messages
@@ -138,18 +144,18 @@ mono error bold
 #color index J_base default "~A~N!~T!~p!~Q!~F!~D" # the rest, new
 color index red default "~A" # all messages
 color index brightred default "~E" # expired messages
-color index blue default "~N" # new messages
-color index blue default "~O" # old messages
+color index cyan default "~N" # new messages
+color index cyan default "~O" # old messages
 color index brightmagenta default "~Q" # messages that have been replied to
-color index brightgreen default "~R" # read messages
-color index blue default "~U" # unread messages
-color index blue default "~U~$" # unread, unreferenced messages
+color index green default "~R" # read messages
+color index cyan default "~U" # unread messages
+color index cyan default "~U~$" # unread, unreferenced messages
 color index brightyellow default "~v" # messages part of a collapsed thread
 color index brightyellow default "~P" # messages from me
-color index cyan default "~p!~F" # messages to me
-color index cyan default "~N~p!~F" # new messages to me
-color index cyan default "~U~p!~F" # unread messages to me
-color index brightgreen default "~R~p!~F" # messages to me
+color index brightcyan default "~p!~F" # messages to me
+color index brightcyan default "~N~p!~F" # new messages to me
+color index brightcyan default "~U~p!~F" # unread messages to me
+color index green default "~R~p!~F" # messages to me
 color index red default "~F" # flagged messages
 color index red default "~F~p" # flagged messages to me
 color index red default "~N~F" # new flagged messages

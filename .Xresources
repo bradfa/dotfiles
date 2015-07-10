@@ -1,29 +1,26 @@
-! terminal colors ------------------------------------------------------------
-
-! tangoesque scheme
-*background: #111111
-*foreground: #babdb6
-! Black (not tango) + DarkGrey
-*color0:  #000000
-*color8:  #555753
-! DarkRed + Red
-*color1:  #ff6565
-*color9:  #ff8d8d
-! DarkGreen + Green
-*color2:  #93d44f
-*color10: #c8e7a8
-! DarkYellow + Yellow
-*color3:  #eab93d
-*color11: #ffc123
-! DarkBlue + Blue
-*color4:  #24a87
-*color12: #3465a4
-! DarkMagenta + Magenta
-*color5:  #ce5c00
-*color13: #f57900
-!DarkCyan + Cyan (both not tango)
-*color6:  #89b6e2
-*color14: #46a4ff
-! LightGrey + White
-*color7:  #cccccc
-*color15: #ffffff
+*background:         #111111
+*foreground:         #f5f2df
+!black                      BLACK
+*color0 :            #0b0d22
+*color8 :            #252525
+!red                        RED
+*color1 :            #eb0c2f
+*color9 :            #ff2242
+!green                      GREEN
+*color2 :            #57df3f
+*color10 :           #71f04f
+!yellow                     YELLOW
+*color3 :            #dcdc1d
+*color11 :           #ebe200
+!blue                       BLUE
+*color4 :            #3a7495
+*color12 :           #0aacdd
+!magenta                    MAGENTA
+*color5 :            #850cd5
+*color13 :           #d900ff
+!cyan                       CYAN
+*color6 :            #8adcd5
+*color14 :           #46fff2
+!white                      WHITE
+*color7 :            #f5f2df
+*color15 :           #FFFFFF

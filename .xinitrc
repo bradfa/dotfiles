@@ -5,6 +5,9 @@
 
 eval $(gpg-agent --daemon) # for smart card
 
+# Execute .Xresources if present to set colors and such
+[[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
+
 # For the rhino host, use left handed mouse config in xmodmap and setup xrandr
 # so that DP-1 is above DVI-I-1
 if [ $(hostname) == "rhino" ]

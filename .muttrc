@@ -27,9 +27,9 @@ set imap_user = $my_user
 set imap_pass = $my_be_passwd
 set spoolfile = "imaps://mail.messagingengine.com/INBOX"
 set folder = "imaps://mail.messagingengine.com/INBOX"
-set ssl_starttls = yes
+set ssl_starttls = no
 set ssl_force_tls = yes
-set smtp_url = "smtps://$my_user:$imap_pass@mail.messagingengine.com"
+set smtp_url = "smtps://$my_user:$imap_pass@mail.messagingengine.com:465"
 # Don't wait to enter mailbox manually
 unset imap_passive
 # Keep IMAP connection alive by polling every (seconds)
@@ -47,8 +47,12 @@ set sort_aux = last-date-received
 set uncollapse_jump
 set date_format = "%m/%d %H:%M"
 set index_format = "[%Z]  %D  %-20.20F  %s"
-# Show message-id header
-unignore Message-Id
+
+# HEADERS: Show from, to, cc, date, message-id, and subject
+ignore *
+unignore from: to: cc: date: message-id: subject:
+unhdr_order *
+hdr_order from: to: cc: date: message-id: subject:
 
 # abook address book
 set query_command="abook --mutt-query '%s'"
@@ -181,15 +185,15 @@ color index yellow red "~v~(~D)" # thread with deleted (doesn't differentiate be
 # message headers ------------------------------------------------------
 
 #color header brightgreen default "^"
-color hdrdefault brightgreen default
-color header brightyellow default "^(From)"
+color hdrdefault green default
+color header yellow default "^(From)"
 color header brightmagenta default "^(Subject)"
 
 # body -----------------------------------------------------------------
 
-color quoted blue default
+color quoted yellow default
 color quoted1 cyan default
-color quoted2 yellow default
+color quoted2 magenta default
 color quoted3 red default
 color quoted4 brightred default
 

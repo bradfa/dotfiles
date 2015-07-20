@@ -5,7 +5,7 @@
 
 [sendemail]
 	smtpencryption = tls
-	from = andrew@bradfordembedded.com
+	from = Andrew Bradford <andrew@bradfordembedded.com>
 	smtpserver = mail.messagingengine.com
 	smtpserverport = 587
 	smtpuser = bradfa@fastmail.fm

@@ -39,8 +39,6 @@ set imap_check_subscribed
 set mail_check = 60
 # Use a header cache to speed things up
 set header_cache = ~/.mutt/hcache
-# Also cache messages
-set message_cachedir = ~/.mutt/mcache
 # Display download progress in 5k increments
 set net_inc = 5
 set postponed = "=Drafts"

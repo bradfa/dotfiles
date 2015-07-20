@@ -13,7 +13,7 @@ eval $(gpg-agent --daemon) # for smart card
 if [ $(hostname) == "rhino" ]
 then
 	xmodmap ~/.xmodmap # enable button mapping, left hand mouse
-	xrandr --output DP-1 --above DVI-I-1
+	xrandr --output DP-1 --left-of DVI-I-1
 fi
 
 # Always set DPI to 72, it's just sane

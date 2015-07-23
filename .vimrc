@@ -53,6 +53,14 @@ set tabstop=2
 set expandtab
 endfunction
 
+" tabs are 4 spaces, Ka style
+function TabKa()
+set softtabstop=4
+set shiftwidth=4
+set tabstop=4
+set expandtab
+endfunction
+
 " tabs are 4 columns, K&R style
 function TabKandR()
 set softtabstop=4

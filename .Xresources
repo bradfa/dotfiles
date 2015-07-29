@@ -4,23 +4,23 @@
 *color0 :            #0b0d22
 *color8 :            #252525
 !red                        RED
-*color1 :            #eb0c2f
-*color9 :            #ff2242
+*color1 :            #ff491f
+*color9 :            #ff5555
 !green                      GREEN
-*color2 :            #57df3f
-*color10 :           #71f04f
+*color2 :            #00aa00
+*color10 :           #55ff55
 !yellow                     YELLOW
-*color3 :            #dcdc1d
-*color11 :           #ebe200
+*color3 :            #d1781f
+*color11 :           #ffff55
 !blue                       BLUE
-*color4 :            #3a7495
-*color12 :           #0aacdd
+*color4 :            #8686ff
+*color12 :           #7979f6
 !magenta                    MAGENTA
-*color5 :            #850cd5
-*color13 :           #d900ff
+*color5 :            #aa00aa
+*color13 :           #ff55ff
 !cyan                       CYAN
-*color6 :            #8adcd5
-*color14 :           #46fff2
+*color6 :            #00aaaa
+*color14 :           #55ffff
 !white                      WHITE
-*color7 :            #f5f2df
+*color7 :            #aaaaaa
 *color15 :           #FFFFFF

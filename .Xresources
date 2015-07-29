@@ -1,13 +1,13 @@
-*background:         #111111
-*foreground:         #f5f2df
+*background:         #080808
+*foreground:         #f5f5f5
 !black                      BLACK
-*color0 :            #0b0d22
-*color8 :            #252525
+*color0 :            #080808
+*color8 :            #282828
 !red                        RED
 *color1 :            #ff491f
 *color9 :            #ff5555
 !green                      GREEN
-*color2 :            #00aa00
+*color2 :            #00dd00
 *color10 :           #55ff55
 !yellow                     YELLOW
 *color3 :            #d1781f
@@ -16,10 +16,10 @@
 *color4 :            #8686ff
 *color12 :           #7979f6
 !magenta                    MAGENTA
-*color5 :            #aa00aa
+*color5 :            #d400d4
 *color13 :           #ff55ff
 !cyan                       CYAN
-*color6 :            #00aaaa
+*color6 :            #00cee6
 *color14 :           #55ffff
 !white                      WHITE
 *color7 :            #aaaaaa

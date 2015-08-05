@@ -10,17 +10,17 @@
 *color2 :            #00dd00
 *color10 :           #55ff55
 !yellow                     YELLOW
-*color3 :            #d1781f
+*color3 :            #ffa900
 *color11 :           #ffff55
 !blue                       BLUE
-*color4 :            #8686ff
-*color12 :           #7979f6
+*color4 :            #6666ff
+*color12 :           #5130ff
 !magenta                    MAGENTA
 *color5 :            #d400d4
 *color13 :           #ff55ff
 !cyan                       CYAN
-*color6 :            #00cee6
-*color14 :           #55ffff
+*color6 :            #32eaff
+*color14 :           #c4ffff
 !white                      WHITE
 *color7 :            #aaaaaa
 *color15 :           #FFFFFF

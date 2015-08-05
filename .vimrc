@@ -3,9 +3,8 @@
 " Turn on syntax highlighting
 syntax on
 
-" Always wrap at 80 columns
-" set tw=80
-set colorcolumn=81
+" Highlight the 81st and 101st columns
+set colorcolumn=81,101
 
 " Turn on auto indenting dependent on file type
 filetype indent on

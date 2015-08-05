@@ -1,20 +1,20 @@
-*background:         #080808
+*background:         #101010
 *foreground:         #f5f5f5
 !black                      BLACK
 *color0 :            #080808
 *color8 :            #282828
 !red                        RED
-*color1 :            #ff491f
-*color9 :            #ff5555
+*color1 :            #ff493f
+*color9 :            #ff4444
 !green                      GREEN
 *color2 :            #00dd00
 *color10 :           #55ff55
 !yellow                     YELLOW
 *color3 :            #ffa900
-*color11 :           #ffff55
+*color11 :           #ff9955
 !blue                       BLUE
-*color4 :            #6666ff
-*color12 :           #5130ff
+*color4 :            #aaaaff
+*color12 :           #8888ff
 !magenta                    MAGENTA
 *color5 :            #d400d4
 *color13 :           #ff55ff

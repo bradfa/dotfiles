@@ -32,11 +32,9 @@ set ssl_force_tls = yes
 set smtp_url = "smtps://$my_user:$imap_pass@mail.messagingengine.com:465"
 # Don't wait to enter mailbox manually
 unset imap_passive
-# Keep IMAP connection alive by polling every (seconds)
-set imap_keepalive = 300
-# Poll for new mail automagically every 60 (units?)
+# Poll for new mail automagically every 600 (seconds?)
 set imap_check_subscribed
-set mail_check = 60
+set mail_check = 600
 # Use a header cache to speed things up
 set header_cache = ~/.mutt/hcache
 # Display download progress in 5k increments

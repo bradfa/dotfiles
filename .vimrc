@@ -22,10 +22,9 @@ set nu
 " Use mouse selections
 set mouse=a
 
-" Decent font and colors if GUI
+" Decent font if GUI
 if has('gui_running')
   set guifont=terminus\ 12
-  colorscheme koehler
 endif
 
 " Code folding
@@ -37,9 +36,7 @@ set nofoldenable
 set foldlevel=1
 
 " Some reasonable colors
-if exists("syntax_on")
-  syntax reset
-endif
+colorscheme torte
 
 " Exec pwd .vimrc if present
 set exrc

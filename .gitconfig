@@ -12,3 +12,5 @@
 
 [include]
 	path = ~/.gitconfig-emailaddress
+[core]
+	excludesfile = ~/.gitignore

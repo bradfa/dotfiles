@@ -27,6 +27,13 @@ if has('gui_running')
   set guifont=terminus\ 12
 endif
 
+" Some reasonable colors
+if has('gui_running')
+  colorscheme koehler
+else
+  colorscheme torte
+endif
+
 " Code folding
 " toggle on with za, fold all with zm, open all zr
 " close with zc, open with zo
@@ -34,9 +41,6 @@ set foldmethod=indent
 set foldnestmax=1
 set nofoldenable
 set foldlevel=1
-
-" Some reasonable colors
-colorscheme torte
 
 " Exec pwd .vimrc if present
 set exrc

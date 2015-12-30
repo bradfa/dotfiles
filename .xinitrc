@@ -23,5 +23,6 @@ xrandr --dpi 72
 dropbox start
 
 xscreensaver -no-splash & # start screen saver daemon
+xss-lock -- xscreensaver-command -lock &
 xset r rate 300 40 # keyboard repeat rate, 300 ms delay 40 hz
 exec awesome # wm

@@ -20,7 +20,7 @@ set send_charset = "utf-8"
 
 # Import gpg encrypted passwords
 set crypt_use_gpgme = yes
-source "gpg -dq ~/.mutt-be-passwd.gpg |"
+source "gpg -duq ~/.mutt-be-passwd.gpg |"
 
 set my_user = bradfa@fastmail.fm
 set imap_user = $my_user

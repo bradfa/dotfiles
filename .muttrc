@@ -52,6 +52,10 @@ unignore from: to: cc: date: message-id: subject:
 unhdr_order *
 hdr_order from: to: cc: date: message-id: subject:
 
+# Auto view things like html mail
+auto_view text/html
+alternative_order text/plain text/enriched text/html
+
 # abook address book
 set query_command="abook --mutt-query '%s'"
 macro index a     "|abook --add-email\n" 'add sender to abook'

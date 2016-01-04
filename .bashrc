@@ -52,3 +52,8 @@ export DEBFULLNAME="Andrew Bradford"
 
 # For perforce, because it's a very special kind of VCS
 export P4CONFIG=.p4settings
+
+# If $HOME/bin exists, prepend it to PATH
+if [ -d "$HOME/bin" ]; then
+	PATH="$HOME/bin:$PATH"
+fi

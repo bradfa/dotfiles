@@ -30,8 +30,6 @@ endif
 " Some reasonable colors
 if has('gui_running')
   colorscheme koehler
-else
-  colorscheme torte
 endif
 
 " Code folding

@@ -8,7 +8,7 @@
 *color9 :            #ff4444
 !green                      GREEN
 *color2 :            #00dd00
-*color10 :           #55ff55
+*color10 :           #33ff33
 !yellow                     YELLOW
 *color3 :            #ffa900
 *color11 :           #ff9955
@@ -20,7 +20,7 @@
 *color13 :           #ff55ff
 !cyan                       CYAN
 *color6 :            #32eaff
-*color14 :           #c4ffff
+*color14 :           #66ffff
 !white                      WHITE
 *color7 :            #cccccc
 *color15 :           #ffffff

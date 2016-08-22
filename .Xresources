@@ -11,10 +11,10 @@
 *color10 :           #33ff33
 !yellow                     YELLOW
 *color3 :            #ffa900
-*color11 :           #ff9955
+*color11 :           #ff8822
 !blue                       BLUE
-*color4 :            #8888ff
-*color12 :           #6666ff
+*color4 :            #aaaaff
+*color12 :           #8888ff
 !magenta                    MAGENTA
 *color5 :            #d400d4
 *color13 :           #ff55ff
@@ -24,3 +24,11 @@
 !white                      WHITE
 *color7 :            #cccccc
 *color15 :           #ffffff
+
+font:			terminus-12
+URxvt*italicFont:	terminus-12
+URxvt.boldFont:		terminus-12
+URxvt*saveLines:	10000
+URxvt.visualBell:	true
+URxvt.scrollBar:	false
+URxvt.fading:		30

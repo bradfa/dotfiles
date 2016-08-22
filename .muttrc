@@ -35,6 +35,8 @@ unset imap_passive
 # Poll for new mail automagically every 600 (seconds?)
 set imap_check_subscribed
 set mail_check = 600
+set mail_check_stats = yes
+set mail_check_stats_interval = 3600
 # Use a header cache to speed things up
 set header_cache = ~/.mutt/hcache
 # Display download progress in 5k increments
@@ -73,6 +75,7 @@ set timeout = 3
 # set mask="!^\\.[^.]"
 
 # set sidebar_delim   = '  |'
+set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
 set sidebar_visible = yes
 set sidebar_width   = 32
 set sidebar_short_path = yes

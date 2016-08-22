@@ -65,15 +65,17 @@ macro pager a     "|abook --add-email\n" 'add sender to abook'
 bind index,pager <down>   sidebar-next
 bind index,pager <up>     sidebar-prev
 bind index,pager <right>  sidebar-open
+bind index,pager B        sidebar-toggle-visible
 
 set wait_key = no
 set timeout = 3
 
 # set mask="!^\\.[^.]"
 
-set sidebar_delim   = '  |'
+# set sidebar_delim   = '  |'
 set sidebar_visible = yes
 set sidebar_width   = 32
+set sidebar_short_path = yes
 # color sidebar_new color221 color233
 set status_chars  = " *%A"
 

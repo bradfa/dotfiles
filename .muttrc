@@ -74,7 +74,7 @@ set timeout = 3
 
 # set mask="!^\\.[^.]"
 
-# set sidebar_delim   = '  |'
+set sidebar_divider_char = '  | '
 set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
 set sidebar_visible = yes
 set sidebar_width   = 32

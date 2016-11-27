@@ -20,7 +20,12 @@ xrandr --dpi 72
 # Start dropbox, if available
 dropbox start
 
-xscreensaver -no-splash & # start screen saver daemon
+# Screensaver and screen locking
+xscreensaver -no-splash &
 xss-lock -- xscreensaver-command -lock &
-xset r rate 300 40 # keyboard repeat rate, 300 ms delay 40 hz
+
+# Keyboard repeat rate, 300 ms delay, 40 Hz
+xset r rate 300 40
+
+# Start window manager
 exec awesome # wm

@@ -14,9 +14,9 @@ then
 	xmodmap ~/.xmodmap # enable button mapping, left hand mouse
 fi
 
-# For piglet host, run xbattbar for a nice battery level display on the left
+# For piglet host, run xbattbar for a nice battery level display on the right
 if [[ $(hostname) == "piglet" ]]; then
-	xbattbar -a -t 1 -c -i "green" left &
+	xbattbar -a -t 1 -c -i "green" right &
 fi
 
 # Always set DPI to 72, it's just sane

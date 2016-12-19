@@ -15,8 +15,9 @@ then
 fi
 
 # For piglet host, run xbattbar for a nice battery level display on the right
+# using my multi-battery acpi readout script
 if [[ $(hostname) == "piglet" ]]; then
-	xbattbar -a -t 1 -c -i "green" right &
+	xbattbar -a -t 1 -c -i "green" right -s ~/bin/acpi-battery-percent.sh &
 fi
 
 # Always set DPI to 72, it's just sane

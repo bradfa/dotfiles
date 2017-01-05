@@ -58,3 +58,9 @@ export P4CONFIG=.p4settings
 if [ -d "$HOME/bin" ]; then
 	PATH="$HOME/bin:$PATH"
 fi
+
+# For golang
+export GOPATH=${HOME}/go/
+
+# Set a locale
+export LANG=en_US.UTF-8

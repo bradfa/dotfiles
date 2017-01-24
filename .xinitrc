@@ -27,7 +27,7 @@ xrandr --dpi 72
 dropbox start
 
 # Start syncthing without launching the browser
-syncthing -no-browser
+syncthing -no-browser &
 
 # Screensaver and screen locking
 xscreensaver -no-splash &

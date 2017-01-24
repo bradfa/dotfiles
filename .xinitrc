@@ -23,9 +23,6 @@ fi
 # Always set DPI to 72, it's just sane
 xrandr --dpi 72
 
-# Start dropbox, if available
-dropbox start
-
 # Start syncthing without launching the browser
 syncthing -no-browser &
 

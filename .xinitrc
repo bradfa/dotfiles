@@ -6,11 +6,12 @@
 eval $(gpg-agent --daemon) # for smart card
 
 # Execute .Xresources if present to set colors and such
-[[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
+if [[ -f ~/.Xresources ]]; then
+	xrdb -merge ~/.Xresources
+fi
 
 # For kaim-eeyore and pooh hosts, use left handed mouse config in xmodmap
-if [[ $(hostname) == "kaim-eeyore" || $(hostname) == "pooh" ]]
-then
+if [[ $(hostname) == "kaim-eeyore" || $(hostname) == "pooh" ]]; then
 	xmodmap ~/.xmodmap # enable button mapping, left hand mouse
 fi
 

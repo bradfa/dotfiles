@@ -26,6 +26,5 @@ xterm*color7: #dddddd
 xterm*color15: #ffffff
 
 xterm*font: terminus-12
-xterm*loginShell: true
 xterm*saveLines: 10000
 xterm*termName: xterm-color

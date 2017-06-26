@@ -1,14 +1,14 @@
-*background: #080808
-*foreground: #f5f5f5
+*background: #000000
+*foreground: #ffffff
 !black           BLACK
-XTerm*color0: #080808
+XTerm*color0: #000000
 XTerm*color8:  #282828
 !red             RED
 XTerm*color1: #ff0000
 XTerm*color9:  #dd4444
 !green           GREEN
-XTerm*color2: #00dd00
-XTerm*color10: #33bb33
+XTerm*color2: #00e000
+XTerm*color10: #33d033
 !yellow          YELLOW
 XTerm*color3: #ffee00
 XTerm*color11: #ffcc22
@@ -19,12 +19,12 @@ XTerm*color12: #5555ff
 XTerm*color5: #ff00ff
 XTerm*color13: #ff55ff
 !cyan            CYAN
-XTerm*color6: #32eaff
-XTerm*color14: #66ffff
+XTerm*color6: #11ffff
+XTerm*color14: #33ffff
 !white           WHITE
 XTerm*color7: #dddddd
 XTerm*color15: #ffffff
 
-XTerm*font: terminus-12
+XTerm*font: monospace-12
 XTerm*saveLines: 10000
 XTerm*termName: xterm-color

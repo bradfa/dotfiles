@@ -28,3 +28,5 @@ XTerm*color15: #ffffff
 XTerm*font: monospace-12
 XTerm*saveLines: 10000
 XTerm*termName: xterm-color
+XTerm*scrollTtyOutput: false
+XTerm*scrollKey: true

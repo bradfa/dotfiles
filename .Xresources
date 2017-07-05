@@ -38,3 +38,4 @@ Mrxvt.autohideTabbar: true
 Mrxvt.showMenu: false
 Mrxvt.font: terminus-12
 Mrxvt.cursorBlink: false
+Mrxvt.smoothResize: true

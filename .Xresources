@@ -36,3 +36,5 @@ Mrxvt.scrollTtyOutputInhibit: true
 Mrxvt.saveLines: 65535
 Mrxvt.autohideTabbar: true
 Mrxvt.showMenu: false
+Mrxvt.font: terminus-12
+Mrxvt.cursorBlink: false

@@ -30,3 +30,9 @@ XTerm*saveLines: 10000
 XTerm*termName: xterm-color
 XTerm*scrollTtyOutput: false
 XTerm*scrollKey: true
+
+Mrxvt.scrollTtyKeypress: true
+Mrxvt.scrollTtyOutputInhibit: true
+Mrxvt.saveLines: 65535
+Mrxvt.autohideTabbar: true
+Mrxvt.showMenu: false

@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Symlink to this from both ~/.xinitrc and ~/.xsession to ensure it runs on
-# every login, regardless of if using `startx` or a login manager.
-
 # Execute .Xresources if present to set colors and such
 if [[ -f ~/.Xresources ]]; then
 	xrdb -merge ~/.Xresources

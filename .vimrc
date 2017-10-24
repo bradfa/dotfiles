@@ -29,7 +29,11 @@ endif
 
 " Some reasonable colors
 if has('gui_running')
+  set t_Co=256
   colorscheme koehler
+else
+  set t_Co=16
+  colorscheme default
 endif
 
 " Code folding

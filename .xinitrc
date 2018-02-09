@@ -16,10 +16,12 @@ if [[ $(hostname) == "piglet" ]]; then
 	xbattbar -a -t 1 -c -i "green" right -s ~/bin/acpi-battery-percent.sh &
 fi
 
-# For kaim-eeyore host, rotate both displayport outputs left
+# For kaim-eeyore host, rotate both displayport outputs left and put DP-2 just
+# to the right of DP-1 (as by default it's to the right assuming landscape).
 if [[ $(hostname) == "kaim-eeyore" ]]; then
 	xrandr --output DP-1 --rotate left
 	xrandr --output DP-2 --rotate left
+	xrandr --output DP-2 --right-of DP-1
 fi
 
 # Always set DPI to 72, it's just sane

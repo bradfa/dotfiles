@@ -60,6 +60,11 @@ if [ -d "$HOME/bin" ]; then
 	PATH="$HOME/bin:$PATH"
 fi
 
+# If $HOME/.local/bin exists, append it to PATH.  Python's pip uses it.
+if [ -d "${HOME}/.local/bin" ]; then
+	PATH="${PATH}:${HOME}/.local/bin"
+fi
+
 # For golang
 export GOPATH=${HOME}/go/
 

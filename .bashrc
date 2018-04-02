@@ -55,16 +55,6 @@ export DEBEMAIL="andrew@bradfordembedded.com"
 # For perforce, because it's a very special kind of VCS
 export P4CONFIG=.p4settings
 
-# If $HOME/bin exists, prepend it to PATH
-if [ -d "$HOME/bin" ]; then
-	PATH="$HOME/bin:$PATH"
-fi
-
-# If $HOME/.local/bin exists, append it to PATH.  Python's pip uses it.
-if [ -d "${HOME}/.local/bin" ]; then
-	PATH="${PATH}:${HOME}/.local/bin"
-fi
-
 # For golang
 export GOPATH=${HOME}/go/
 

@@ -21,7 +21,7 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
-# set PATH so it includes Go, if it exists in the usual place
-if [ -d "/usr/local/go/bin" ] ; then
-	PATH="${PATH}:/usr/local/go/bin"
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
 fi

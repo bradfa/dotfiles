@@ -24,9 +24,6 @@ if [[ $(hostname) == "kaim-eeyore" ]]; then
 	xrandr --output DisplayPort-1 --right-of DisplayPort-0
 fi
 
-# Start syncthing without launching the browser
-syncthing -no-browser &
-
 # Screensaver and screen locking
 xscreensaver -no-splash &
 xss-lock -- xscreensaver-command -lock &

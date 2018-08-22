@@ -19,8 +19,8 @@ fi
 # For kaim-eeyore host, rotate both displayport outputs left and put DP-1 just
 # to the right of DP-0.  The left-most monitor is the main one.
 if [[ $(hostname) == "kaim-eeyore" ]]; then
-	xrandr --output DisplayPort-0 --rotate left
-	xrandr --output DisplayPort-1 --rotate left
+#	xrandr --output DisplayPort-0 --rotate left
+#	xrandr --output DisplayPort-1 --rotate left
 	xrandr --output DisplayPort-1 --right-of DisplayPort-0
 fi
 

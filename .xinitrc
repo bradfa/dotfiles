@@ -24,9 +24,6 @@ if [[ $(hostname) == "kaim-eeyore" ]]; then
 	xrandr --output DisplayPort-1 --right-of DisplayPort-0
 fi
 
-# Always set DPI to 72, it's just sane
-xrandr --dpi 72
-
 # Start syncthing without launching the browser
 syncthing -no-browser &
 

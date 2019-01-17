@@ -28,6 +28,9 @@ fi
 xscreensaver -no-splash &
 xss-lock -- xscreensaver-command -lock &
 
+# Start syncthing
+syncthing -no-browser &
+
 # Keyboard repeat rate, 300 ms delay, 40 Hz
 xset r rate 300 40
 

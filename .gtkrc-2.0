@@ -1,5 +1,5 @@
 style "font" {
-       font_name = "Sans 12"
+       font_name = "Sans 10"
 }
 widget_class "*" style "font"
-gtk-font-name = "Sans 12"
+gtk-font-name = "Sans 10"

@@ -24,6 +24,15 @@ if [[ $(hostname) == "kaim-eeyore" ]]; then
 	xrandr --output DisplayPort-1 --right-of DisplayPort-0
 fi
 
+# Start network-manager applet
+nm-applet &
+
+# Start dropbox
+dropbox start &
+
+# Start RingCentral meetings app
+ringcentral &
+
 # Screensaver and screen locking
 xscreensaver -no-splash &
 xss-lock -- xscreensaver-command -lock &

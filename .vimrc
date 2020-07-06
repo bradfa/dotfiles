@@ -24,7 +24,7 @@ set mouse=a
 
 " Decent font if GUI
 if has('gui_running')
-  set guifont=terminus\ 8
+  set guifont=terminus\ 12
 endif
 
 " Some reasonable colors

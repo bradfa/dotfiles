@@ -10,9 +10,9 @@ if [[ $(hostname) == "kaim-eeyore" || $(hostname) == "pooh" ]]; then
 	xmodmap ~/.xmodmap # enable button mapping, left hand mouse
 fi
 
-# For piglet host, run xbattbar for a nice battery level display on the right
+# For t420s laptop, run xbattbar for a nice battery level display on the right
 # using my multi-battery acpi readout script
-if [[ $(hostname) == "piglet" ]]; then
+if [[ $(hostname) == "t420s" ]]; then
 	xbattbar -a -t 1 -c -i "green" right -s ~/bin/acpi-battery-percent.sh &
 fi
 

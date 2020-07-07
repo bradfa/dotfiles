@@ -26,9 +26,6 @@ nm-applet &
 # Start dropbox
 dropbox start &
 
-# Start RingCentral meetings app
-ringcentral &
-
 # Screensaver and screen locking
 xscreensaver -no-splash &
 xss-lock -- xscreensaver-command -lock &

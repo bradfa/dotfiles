@@ -36,5 +36,8 @@ syncthing -no-browser &
 # Keyboard repeat rate, 300 ms delay, 40 Hz
 xset r rate 300 40
 
+# Start xcompmgr so screen sharing works correctly
+xcompmgr -c -l0 -t0 -r0 -o.00 &
+
 # Start window manager
 exec awesome # wm

@@ -13,10 +13,14 @@ fi
 
 # For preci host, rotate both displayport outputs and put DP-1
 # to the right of DP-0.  The left-most monitor is the main one.
+# For some strange reason, sometimes the 2nd monitor comes up as
+# DP-4 (so the outputs end up numbered 0, 4, 5, 6 which makes no
+# sense.
 # Also enable left handed mousing.
 if [[ $(hostname) == "presci" ]]; then
 	xrandr --output DisplayPort-0 --rotate left
 	xrandr --output DisplayPort-1 --rotate right --right-of DisplayPort-0
+	xrandr --output DisplayPort-4 --rotate right --right-of DisplayPort-0
 	xmodmap ~/.xmodmap # enable button mapping, left hand mouse
 fi
 

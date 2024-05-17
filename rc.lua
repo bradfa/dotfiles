@@ -248,6 +248,12 @@ root.buttons(gears.table.join(
 
 -- {{{ Key bindings
 globalkeys = gears.table.join(
+    awful.key({}, 'XF86MonBrightnessUp', function() os.execute("xbacklight -inc 5") end, {description = 'brightness up', group = 'hotkeys'}),
+    awful.key({}, 'XF86MonBrightnessDown', function() os.execute("xbacklight -dec 5") end, {description = 'brightness up', group = 'hotkeys'}),
+    awful.key({}, 'XF86AudioRaiseVolume', function() os.execute("amixer set Master 5%+") end, {description = 'volume up', group = 'hotkeys'}),
+    awful.key({}, 'XF86AudioLowerVolume', function() os.execute("amixer set Master 5%-") end, {description = 'volume down', group = 'hotkeys'}),
+    awful.key({}, 'XF86AudioMute', function() os.execute("amixer -q set Master toggle") end, {description = 'toggle mute', group = 'hotkeys'}),
+    awful.key({}, 'XF86AudioMicMute', function() os.execute("amixer -q set Capture toggle") end, {description = 'toggle mic mute', group = 'hotkeys'}),
     awful.key({ modkey }, "F12", function () awful.spawn( "xscreensaver-command -lock" ) end),
     awful.key({ modkey,           }, "s",      hotkeys_popup.show_help,
               {description="show help", group="awesome"}),

@@ -7,8 +7,9 @@ fi
 
 # For t420s laptop, run xbattbar for a nice battery level display on the right
 # using my multi-battery acpi readout script
-if [[ $(hostname) == "t420s" ]]; then
+if [[ $(hostname) == "t420s" || $(hostname) == "t530" ]]; then
 	xbattbar -a -t 1 -c -i "green" right -s ~/bin/acpi-battery-percent.sh &
+#	volumeicon &
 fi
 
 # For preci host, rotate both displayport outputs and put DP-1

@@ -20,8 +20,9 @@ fi
 # Also enable left handed mousing.
 if [[ $(hostname) == "presci" ]]; then
 	xrandr --output DisplayPort-0 --rotate left
+	xrandr --output DisplayPort-3 --rotate left
 	xrandr --output DisplayPort-1 --rotate right --right-of DisplayPort-0
-	xrandr --output DisplayPort-4 --rotate right --right-of DisplayPort-0
+	xrandr --output DisplayPort-4 --rotate right --right-of DisplayPort-3
 	xmodmap ~/.xmodmap # enable button mapping, left hand mouse
 fi
 

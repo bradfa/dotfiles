@@ -55,8 +55,8 @@ set tabstop=2
 set expandtab
 endfunction
 
-" tabs are 4 spaces, Ka style
-function TabKa()
+" tabs are 4 spaces, Rust or KA style
+function TabRust()
 set softtabstop=4
 set shiftwidth=4
 set tabstop=4

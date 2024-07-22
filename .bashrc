@@ -53,8 +53,8 @@ fi
 export EDITOR=vim
 
 # Set my name for debian packaging, set email in /etc/mail-name
-export DEBFULLNAME="Andrew Bradford"
-export DEBEMAIL="andrew.bradford@softiron.com"
+#export DEBFULLNAME="Andrew Bradford"
+#export DEBEMAIL="andrew.bradford@softiron.com"
 
 # For perforce, because it's a very special kind of VCS
 export P4CONFIG=.p4settings

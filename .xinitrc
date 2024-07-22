@@ -26,6 +26,11 @@ if [[ $(hostname) == "presci" ]]; then
 	xmodmap ~/.xmodmap # enable button mapping, left hand mouse
 fi
 
+# For roo host, use left hand mousing.
+if [[ $(hostname) == "roo" ]]; then
+	xmodmap ~/.xmodmap # enable button mapping, left hand mouse
+fi
+
 # Start network-manager applet
 nm-applet &
 

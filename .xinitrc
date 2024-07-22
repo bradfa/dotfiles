@@ -35,7 +35,7 @@ fi
 nm-applet &
 
 # Start dropbox
-dropbox start &
+#dropbox start &
 
 # Screensaver and screen locking
 xscreensaver -no-splash &

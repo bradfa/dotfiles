@@ -57,7 +57,7 @@ export EDITOR=vim
 #export DEBEMAIL="andrew.bradford@softiron.com"
 
 # For perforce, because it's a very special kind of VCS
-export P4CONFIG=.p4settings
+#export P4CONFIG=.p4settings
 
 # For golang
 export GOPATH=${HOME}/go/

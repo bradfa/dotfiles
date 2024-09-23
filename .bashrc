@@ -9,6 +9,7 @@ HISTCONTROL=ignoreboth
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
+alias eclipse='flatpak run org.eclipse.Java'
 
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then

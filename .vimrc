@@ -30,7 +30,7 @@ endif
 " Some reasonable colors
 if has('gui_running')
   set t_Co=256
-  colorscheme koehler
+  colorscheme morning
 else
   set t_Co=16
   colorscheme default

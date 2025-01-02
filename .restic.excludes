@@ -1,0 +1,17 @@
+# Exclude our sstate, downloads, and build output dirs
+git/**/sstate-cache
+git/**/downloads
+git/**/tmp-*
+git/**/tmp
+git/**/workspace
+git/**/cache
+sstate-cache/
+downloads/
+
+# Exclude intermediate build artifacts
+*.o
+
+# Exclude downloads and screenshots dirs
+downloads/
+Downloads/
+screenshots/

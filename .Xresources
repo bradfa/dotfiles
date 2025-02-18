@@ -39,3 +39,9 @@ Mrxvt.showMenu: false
 Mrxvt.font: terminus-12
 Mrxvt.cursorBlink: false
 Mrxvt.smoothResize: true
+
+Xft.dpi: 96
+Xft.antialias: true
+Xft.rgba: none
+Xft.hinting: true
+Xft.hintstyle: hintslight

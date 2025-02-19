@@ -44,4 +44,4 @@ Xft.dpi: 96
 Xft.antialias: true
 Xft.rgba: none
 Xft.hinting: true
-Xft.hintstyle: hintslight
+Xft.hintstyle: hintfull

@@ -48,15 +48,15 @@ set foldlevel=1
 set exrc
 
 " 2 space tabs, Python or CLFS
-function TabCLFS()
+function TabPythonClfs()
 set softtabstop=2
 set shiftwidth=2
 set tabstop=2
 set expandtab
 endfunction
 
-" tabs are 4 spaces, Rust or KA style
-function TabRust()
+" tabs are 4 spaces, OE, Rust, or KA style
+function TabOeRustKa()
 set softtabstop=4
 set shiftwidth=4
 set tabstop=4

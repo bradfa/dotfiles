@@ -53,6 +53,11 @@ fi
 
 export EDITOR=vim
 
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
+
 # Set my name for debian packaging, set email in /etc/mail-name
 #export DEBFULLNAME="Andrew Bradford"
 #export DEBEMAIL="andrew.bradford@softiron.com"

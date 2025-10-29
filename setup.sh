@@ -40,6 +40,7 @@ for file in \
 	.gtkrc-2.0 \
 	.profile \
 	.restic.excludes \
+	.tmux.conf \
 	.vimrc \
 	.xinitrc \
 	.xmodmap \

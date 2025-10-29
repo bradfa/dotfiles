@@ -5,10 +5,10 @@
 
 [sendemail]
 	smtpencryption = tls
-	from = Andrew Bradford <andrew@bradfordembedded.com>
-	smtpserver = mail.messagingengine.com
+	from = Andrew Bradford <andrew.bradford@konsulko.com>
+	smtpserver = smtp.gmail.com
 	smtpserverport = 587
-	smtpuser = bradfa@fastmail.fm
+	smtpuser = andrew.bradford@konsulko.com
 
 [include]
 	path = ~/.gitconfig-emailaddress

@@ -70,3 +70,8 @@ export GOPATH=${HOME}/go/
 
 # Set a locale
 export LANG=en_US.UTF-8
+
+# Update SSH agent socket symlink for tmux reattachment
+if [ -n "$SSH_AUTH_SOCK" ] && [ "$SSH_AUTH_SOCK" != "$HOME/.ssh/ssh_auth_sock" ]; then
+    ln -sf "$SSH_AUTH_SOCK" "$HOME/.ssh/ssh_auth_sock"
+fi

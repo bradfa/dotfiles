@@ -50,3 +50,4 @@ for file in \
 done
 ln -sfv $(pwd)/gtk-3.0/settings.ini ~/.config/gtk-3.0/
 ln -sfv $(pwd)/rc.lua ~/.config/awesome/
+ln -sfv $(pwd)/.git-hooks ~/

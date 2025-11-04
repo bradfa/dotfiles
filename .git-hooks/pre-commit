@@ -1,0 +1,67 @@
+#!/bin/bash
+# Global git pre-commit hook to prevent emojis from being added to files
+
+# Unicode ranges for emojis (comprehensive coverage)
+# Includes: Emoticons, Misc Symbols, Dingbats, Transport symbols, Enclosed chars,
+# Supplemental Symbols, and various emoji extensions
+EMOJI_PATTERN='[\x{1F600}-\x{1F64F}]|[\x{1F300}-\x{1F5FF}]|[\x{1F680}-\x{1F6FF}]|[\x{1F700}-\x{1F77F}]|[\x{1F780}-\x{1F7FF}]|[\x{1F800}-\x{1F8FF}]|[\x{1F900}-\x{1F9FF}]|[\x{1FA00}-\x{1FA6F}]|[\x{1FA70}-\x{1FAFF}]|[\x{2600}-\x{26FF}]|[\x{2700}-\x{27BF}]|[\x{231A}-\x{231B}]|[\x{23E9}-\x{23EC}]|[\x{23F0}]|[\x{23F3}]|[\x{25FD}-\x{25FE}]|[\x{2614}-\x{2615}]|[\x{2648}-\x{2653}]|[\x{267F}]|[\x{2693}]|[\x{26A1}]|[\x{26AA}-\x{26AB}]|[\x{26BD}-\x{26BE}]|[\x{26C4}-\x{26C5}]|[\x{26CE}]|[\x{26D4}]|[\x{26EA}]|[\x{26F2}-\x{26F3}]|[\x{26F5}]|[\x{26FA}]|[\x{26FD}]|[\x{2705}]|[\x{270A}-\x{270B}]|[\x{2728}]|[\x{274C}]|[\x{274E}]|[\x{2753}-\x{2755}]|[\x{2757}]|[\x{2795}-\x{2797}]|[\x{27B0}]|[\x{27BF}]|[\x{2B1B}-\x{2B1C}]|[\x{2B50}]|[\x{2B55}]'
+
+# Get the diff of staged changes
+DIFF=$(git diff --cached --unified=0)
+
+if [ -z "$DIFF" ]; then
+    # No changes staged
+    exit 0
+fi
+
+FOUND_EMOJI=0
+CURRENT_FILE=""
+
+# Process diff line by line
+while IFS= read -r line; do
+    # Track which file we're in
+    if [[ "$line" =~ ^diff\ --git ]]; then
+        CURRENT_FILE=$(echo "$line" | sed 's/.*b\///')
+    fi
+
+    # Check only added lines (lines starting with '+' but not '+++')
+    if [[ "$line" =~ ^[+][^+] ]]; then
+        # Remove the leading '+'
+        content="${line:1}"
+
+        # Check for emojis using perl regex (bash doesn't support Unicode properties well)
+        if echo "$content" | perl -CS -ne "exit 1 if /$EMOJI_PATTERN/"; then
+            : # No emoji found, continue
+        else
+            if [ $FOUND_EMOJI -eq 0 ]; then
+                echo "ERROR: Emojis found in staged changes!"
+                echo "Emojis are not allowed in code. Please remove them."
+                echo ""
+                FOUND_EMOJI=1
+            fi
+
+            # Show the file and the problematic line
+            echo "File: $CURRENT_FILE"
+            echo "  $content"
+
+            # Highlight where the emoji is
+            emoji_pos=$(echo "$content" | perl -CS -ne "print pos()-1, qq(\n) while /$EMOJI_PATTERN/g")
+            if [ -n "$emoji_pos" ]; then
+                while read -r pos; do
+                    # Extract the emoji character
+                    emoji=$(echo "$content" | perl -CS -ne "/$EMOJI_PATTERN/g; print \$&")
+                    echo "  ^ Emoji found at position $pos: $emoji"
+                done <<< "$emoji_pos"
+            fi
+            echo ""
+        fi
+    fi
+done <<< "$DIFF"
+
+if [ $FOUND_EMOJI -eq 1 ]; then
+    echo "Commit aborted due to emoji detection."
+    echo "To commit these changes, remove all emojis from the added lines."
+    exit 1
+fi
+
+exit 0

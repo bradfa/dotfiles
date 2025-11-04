@@ -14,5 +14,6 @@
 	path = ~/.gitconfig-emailaddress
 [core]
 	excludesfile = ~/.gitignore
+	hooksPath = ~/.git-hooks
 [diff]
 	submodule = log

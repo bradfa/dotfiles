@@ -58,6 +58,12 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
+# if ~/.nvm/nvm.sh exists, source it, so we can do nodejs fun
+# Just do `git clone https://github.com/nvm-sh/nvm.git ~/.nvm` to grab nvm
+if [ -s "${HOME}/.nvm/nvm.sh" ]; then
+	source ${HOME}/.nvm/nvm.sh
+fi
+
 # Set my name for debian packaging, set email in /etc/mail-name
 #export DEBFULLNAME="Andrew Bradford"
 #export DEBEMAIL="andrew.bradford@softiron.com"

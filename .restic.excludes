@@ -1,6 +1,8 @@
 # Exclude our sstate, downloads, and build output dirs
 git/**/sstate-cache
+git/**/deploy-*
 git/**/downloads
+git/**/out-*
 git/**/tmp-*
 git/**/tmp
 git/**/workspace

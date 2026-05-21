@@ -10,6 +10,7 @@ git/**/cache
 sstate-cache/
 downloads/
 oe-downloads/
+tmp*/
 
 # Exclude intermediate build artifacts
 *.o

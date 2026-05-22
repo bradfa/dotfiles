@@ -64,10 +64,11 @@ if [ $FOUND_EMOJI -eq 1 ]; then
     exit 1
 fi
 
-# Check for em-dashes (U+2014)
-EM_DASH_PATTERN='\x{2014}'
+# Check for typographic dashes: en dash (U+2013), em dash (U+2014), horizontal bar (U+2015),
+# and mathematical minus (U+2212)
+DASH_PATTERN='[\x{2013}-\x{2015}]|\x{2212}'
 
-FOUND_EM_DASH=0
+FOUND_DASH=0
 CURRENT_FILE=""
 
 while IFS= read -r line; do
@@ -78,14 +79,14 @@ while IFS= read -r line; do
     if [[ "$line" =~ ^[+][^+] ]]; then
         content="${line:1}"
 
-        if echo "$content" | perl -CS -ne "exit 1 if /$EM_DASH_PATTERN/"; then
-            : # No em-dash found, continue
+        if echo "$content" | perl -CS -ne "exit 1 if /$DASH_PATTERN/"; then
+            : # No typographic dash found, continue
         else
-            if [ $FOUND_EM_DASH -eq 0 ]; then
-                echo "ERROR: Em-dashes found in staged changes!"
-                echo "Em-dashes are not allowed. Use a comma, colon, parentheses, or plain hyphen instead."
+            if [ $FOUND_DASH -eq 0 ]; then
+                echo "ERROR: Typographic dashes found in staged changes!"
+                echo "Non-standard dashes are not allowed. Use a plain hyphen instead."
                 echo ""
-                FOUND_EM_DASH=1
+                FOUND_DASH=1
             fi
 
             echo "File: $CURRENT_FILE"
@@ -95,9 +96,9 @@ while IFS= read -r line; do
     fi
 done <<< "$DIFF"
 
-if [ $FOUND_EM_DASH -eq 1 ]; then
-    echo "Commit aborted due to em-dash detection."
-    echo "To commit these changes, replace em-dashes with commas, colons, parentheses, or plain hyphens."
+if [ $FOUND_DASH -eq 1 ]; then
+    echo "Commit aborted due to typographic dash detection."
+    echo "To commit these changes, replace non-standard dashes with a plain hyphen or rephrase."
     exit 1
 fi
 

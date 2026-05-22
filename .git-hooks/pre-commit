@@ -1,5 +1,5 @@
 #!/bin/bash
-# Global git pre-commit hook to prevent emojis from being added to files
+# Global git pre-commit hook to prevent emojis and em-dashes from being added to files
 
 # Unicode ranges for emojis (comprehensive coverage)
 # Includes: Emoticons, Misc Symbols, Dingbats, Transport symbols, Enclosed chars,
@@ -61,6 +61,43 @@ done <<< "$DIFF"
 if [ $FOUND_EMOJI -eq 1 ]; then
     echo "Commit aborted due to emoji detection."
     echo "To commit these changes, remove all emojis from the added lines."
+    exit 1
+fi
+
+# Check for em-dashes (U+2014)
+EM_DASH_PATTERN='\x{2014}'
+
+FOUND_EM_DASH=0
+CURRENT_FILE=""
+
+while IFS= read -r line; do
+    if [[ "$line" =~ ^diff\ --git ]]; then
+        CURRENT_FILE=$(echo "$line" | sed 's/.*b\///')
+    fi
+
+    if [[ "$line" =~ ^[+][^+] ]]; then
+        content="${line:1}"
+
+        if echo "$content" | perl -CS -ne "exit 1 if /$EM_DASH_PATTERN/"; then
+            : # No em-dash found, continue
+        else
+            if [ $FOUND_EM_DASH -eq 0 ]; then
+                echo "ERROR: Em-dashes found in staged changes!"
+                echo "Em-dashes are not allowed. Use a comma, colon, parentheses, or plain hyphen instead."
+                echo ""
+                FOUND_EM_DASH=1
+            fi
+
+            echo "File: $CURRENT_FILE"
+            echo "  $content"
+            echo ""
+        fi
+    fi
+done <<< "$DIFF"
+
+if [ $FOUND_EM_DASH -eq 1 ]; then
+    echo "Commit aborted due to em-dash detection."
+    echo "To commit these changes, replace em-dashes with commas, colons, parentheses, or plain hyphens."
     exit 1
 fi
 

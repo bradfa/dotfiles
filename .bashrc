@@ -85,3 +85,6 @@ export LANG=en_US.UTF-8
 if [ -n "$SSH_AUTH_SOCK" ] && [ "$SSH_AUTH_SOCK" != "$HOME/.ssh/ssh_auth_sock" ]; then
     ln -sf "$SSH_AUTH_SOCK" "$HOME/.ssh/ssh_auth_sock"
 fi
+
+# Handle bash completions which use the now-removed _split_longopt
+_split_longopt() { _comp__split_longopt "$@"; }

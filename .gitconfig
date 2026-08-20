@@ -17,3 +17,5 @@
 	hooksPath = ~/.git-hooks
 [diff]
 	submodule = log
+[commit]
+	verbose = true
